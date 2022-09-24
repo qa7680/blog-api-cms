@@ -2,7 +2,7 @@
   "name": "blog-api-cms",
   "version": "0.1.0",
   "engines": {
-    "node":"16.17.0"
+    "node": "16.17.0"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
+    "serve": "^14.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
