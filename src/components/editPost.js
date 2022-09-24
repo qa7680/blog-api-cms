@@ -45,7 +45,7 @@ const EditPost = () => {
     //send PUT request api to edit post
     const saveChanges = () => {
         fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/`, {
-            mode: 'cors', method: 'PUt', headers: {'Content-Type': 'application/json',
+            mode: 'cors', method: 'PUT', headers: {'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + user.token}, body: JSON.stringify({
                 title: title,
                 blogText: blogText,
