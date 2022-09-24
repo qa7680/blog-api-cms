@@ -82,7 +82,7 @@ const EditPost = () => {
                         </select>
                     </div>
                     <button style={{width: '100%'}} type="submit" class="btn btn-primary">Save Changes</button>
-                    <button onClick={cancelEdit} style={{width: '100%'}} class="btn btn-warning">Cancel</button>
+                    <button type="button" onClick={cancelEdit} style={{width: '100%'}} class="btn btn-warning">Cancel</button>
                 </form>
             </div>
         </div>

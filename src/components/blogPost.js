@@ -29,7 +29,7 @@ const BlogPost = () => {
         fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}`, {mode: 'cors', method: 'GET'})
             .then(res => res.json())
             .then(data => setPost(data.post[0]));
-    }, []);
+    }, [post]);
 
     //fetch single post comments
     useEffect(() => {
