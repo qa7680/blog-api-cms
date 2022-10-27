@@ -26,14 +26,14 @@ const BlogPost = () => {
     
     //fetch single post using url param
     useEffect(() => {
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}`, {mode: 'cors', method: 'GET'})
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}`, {mode: 'cors', method: 'GET'})
             .then(res => res.json())
             .then(data => setPost(data.post[0]));
     }, [post]);
 
     //fetch single post comments
     useEffect(() => {
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/comments`, {mode: 'cors', method: 'GET'})
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}/comments`, {mode: 'cors', method: 'GET'})
             .then(res => res.json())
             .then(data => setComments(data.comments.map(comment => {
                 return {...comment, time: DateTime.fromISO(comment.time).setLocale('en').toFormat('ff')}
@@ -43,7 +43,7 @@ const BlogPost = () => {
     //send post request to our api to add a comment
     function addComment(e){
         e.preventDefault();
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/comments`,
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}/comments`,
         {mode:'cors', method: 'POST', headers: {'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + user.token}, body: JSON.stringify({
             comment: commentField,
@@ -70,14 +70,14 @@ const BlogPost = () => {
     const deleteComment = () => {
         handleClose();
         if(blogOrComment == 'comment'){
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/comments/${deleteCommentId}`, {
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}/comments/${deleteCommentId}`, {
             mode: 'cors', method: 'DELETE', headers: {'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + user.token}
         })
             .then(res => res.json())
             .then(data => console.log(`Comment ${deleteCommentId} deleted ${data}`))
         }else if(blogOrComment == 'post'){
-            fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}`, {
+            fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}`, {
                 mode: 'cors', method: 'DELETE', headers: { 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + user.token }
             })

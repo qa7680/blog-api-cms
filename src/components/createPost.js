@@ -19,7 +19,7 @@ const CreatePost = () => {
 
     //handle submit post 
     const submitPost = () => {
-        fetch('https://powerful-sands-70177.herokuapp.com/api/posts', {
+        fetch('https://qa7680-blog-api.onrender.com/api/posts', {
             mode: 'cors', method: 'POST', headers: {'Content-Type': 'application/json', 
             'Authorization': 'Bearer ' + user.token}, body: JSON.stringify({
                 title: title,

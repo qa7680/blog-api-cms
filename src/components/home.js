@@ -29,7 +29,7 @@ const Homepage = () => {
 
     //fetch all posts
     useEffect(() => {
-        fetch('https://powerful-sands-70177.herokuapp.com/api/posts', {mode:'cors', method:'GET'})
+        fetch('https://qa7680-blog-api.onrender.com/api/posts', {mode:'cors', method:'GET'})
             .then(res => res.json())
             .then(data => {
                 setPosts(data.all_posts.map(post => {
@@ -41,7 +41,7 @@ const Homepage = () => {
 
     //publish/unpublish function
     const postPublished = (post) => {
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${post._id}`, {
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${post._id}`, {
             mode: 'cors', method: 'PUT', headers: {'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + user.token}, body: JSON.stringify({
                 published: !post.published

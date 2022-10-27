@@ -15,7 +15,7 @@ const EditPost = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}`, {
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}`, {
             mode: 'cors', method: 'GET'
         })
             .then(res => res.json())
@@ -44,7 +44,7 @@ const EditPost = () => {
 
     //send PUT request api to edit post
     const saveChanges = () => {
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/`, {
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}/`, {
             mode: 'cors', method: 'PUT', headers: {'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + user.token}, body: JSON.stringify({
                 title: title,

@@ -20,7 +20,7 @@ const Login = () => {
     //handle login form
     const handleLogin = (e) => {
         e.preventDefault();
-        fetch('https://powerful-sands-70177.herokuapp.com/api/user/login', {
+        fetch('https://qa7680-blog-api.onrender.com/api/user/login', {
             mode: 'cors', method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({
                 username: username,
                 password: password

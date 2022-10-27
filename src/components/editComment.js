@@ -26,7 +26,7 @@ const EditComment = ({ show, handleClose, comment, postId}) => {
     const editCommentReq = (e) => {
         e.preventDefault();
         handleClose();
-        fetch(`https://powerful-sands-70177.herokuapp.com/api/posts/${postId}/comments/${comment._id}`, {
+        fetch(`https://qa7680-blog-api.onrender.com/api/posts/${postId}/comments/${comment._id}`, {
             mode: 'cors', method: 'PUT', headers: { 'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + user.token },
             body: JSON.stringify({
