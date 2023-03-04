@@ -1,6 +1,3 @@
-## CMS for our blog-api-client: https://qa7680-blog-api-cms.netlify.app/ (username: usertest, password: usertest)
-This is a CMS for our client front end(https://qa7680-blog-api-client.netlify.app/) using our blog-api backend(https://powerful-sands-70177.herokuapp.com/api/posts) to fetch data. Bootstrap and react-bootstrap were used as CSS frameworks for styling.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
